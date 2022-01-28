@@ -1,0 +1,37 @@
+.home-text {
+  color: #ffffff;
+  margin-left: 5rem;
+}
+Col {
+  color: #ffffff;
+}
+
+.main-container {
+  margin-top: 5rem;
+  /* background-image: url(../../assets/camera.png); */
+  /* background-position: center; */
+  /* height: 800px; */
+  /* background-size: cover; */
+  /* width: 90%; */
+}
+.main-container h1 {
+  font-size: 3rem;
+}
+.portfolio-button {
+  cursor: pointer;
+  background-color: transparent;
+  height: 50px;
+  width: 200px;
+  font-size: 1.5em;
+  color: #fff;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+}
+.border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 3px;
+}
+.border-gradient-purple {
+  border-image-source: linear-gradient(to left, #0d52bd, #d53a9d);
+}

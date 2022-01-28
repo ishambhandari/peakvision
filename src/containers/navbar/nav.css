@@ -1,0 +1,31 @@
+.container-class {
+  margin-top: 1.5rem;
+  margin-left: 5rem;
+  color: #fff;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+}
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+}
+.nav-links li {
+  padding: 0.5rem;
+}
+.nav-div {
+  display: table;
+  margin: auto;
+}
+.icons img {
+  margin: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+  .container-class {
+    overflow: hidden;
+  }
+}
