@@ -22,7 +22,7 @@ const Nav = () => {
             </ul>
           </div>
         </Col>
-        <Col sm={5} lg={3}>
+        <Col>
           <div className="icons">
             <img src={instagram} alt="instagram-logo" />
             <img src={facebook} alt="facebook-logo" />

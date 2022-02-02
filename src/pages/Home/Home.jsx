@@ -10,28 +10,17 @@ const Home = () => {
     <div className="home-text">
       <div className="home">
         <div className="main-container">
-          <Row style={{ height: "50%" }}>
-            <Col sm={3} lg={3}>
-              <h1 className="h1-first">In It</h1>
-              <h1 style={{ fontSize: "4rem" }}>
-                <b>To Nail It </b>
-              </h1>
-            </Col>
-
-            <Col sm={9}>
-              {/* <img */}
-              {/*   src={Camera} */}
-              {/*   alt="Camera" */}
-              {/*   style={{ height: "50%", width: "70%" }} */}
-              {/* /> */}
-            </Col>
+          <Row>
+            <h1 className="h1-first">In It</h1>
+            <h1 style={{ fontSize: "4rem" }}>
+              <b>To Nail It </b>
+            </h1>
           </Row>
           <button className="portfolio-button border-gradient border-gradient-purple">
             Our Portfolio
           </button>
         </div>
       </div>
-      <Card_About></Card_About>
     </div>
   );
 };

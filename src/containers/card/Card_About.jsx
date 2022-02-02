@@ -5,8 +5,18 @@ import "./card.css";
 const Card_About = (props) => {
   return (
     <div className="card_container">
-      <Card style={{ backgroundColor: "#d53a9d", borderRadius: "10px" }}>
-        <Card.Body>{props.body}</Card.Body>
+      {/*   <div className="card-style"> */}
+      {/*     <Card.Body>{props.children}</Card.Body> */}
+      {/*   </div> */}
+      {/* </div> */}
+
+      <Card
+        style={{
+          backgroundImage: "linear-gradient(#6a3093,#a044ff)",
+          borderRadius: "20px",
+        }}
+      >
+        <Card.Body>{props.children}</Card.Body>
       </Card>
     </div>
   );
