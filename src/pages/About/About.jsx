@@ -4,6 +4,7 @@ import Card_About from "../../containers/card/Card_About";
 import design from "../../assets/design.png";
 import branding from "../../assets/branding.png";
 import photo from "../../assets/photo.png";
+import "./about.css";
 
 const About = () => {
   const test =
@@ -75,6 +76,14 @@ const About = () => {
               </Container>
             </Card_About>
           </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row>
+          <h1 className="about-heading" style={{ marginTop: "5rem" }}>
+            <b>Who We Are</b>
+          </h1>
+          <p style={{ textAlign: "justify", color: "#fff" }}>{test}</p>
         </Row>
       </Container>
     </div>
