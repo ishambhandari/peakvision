@@ -1,6 +1,9 @@
 .about-heading {
-  color: #fff;
-  text-align: center;
-  font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    font-size: 4rem;
+}
+.zzz {
+    z-index: -100;
 }
 /* this is code pen */
