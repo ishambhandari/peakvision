@@ -1,9 +1,10 @@
 import React from "react";
 import Home from "./pages/Home/Home";
-import NavSmall from "./containers/navbar/NavSmall";
 import Nav from "./containers/navbar/Nav";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import Clients from "./pages/Clients/Clients";
+
 import "./App.css";
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
             </div>
             <Home />
             <About />
+            <Clients />
             <Contact />
         </div>
     );

@@ -92,7 +92,7 @@ const Contact = () => {
                     <textarea
                         style={{
                             backgroundColor: "#000",
-                            borderWidth: "0 0 2px",
+                            borderWidth: "2 px 2px 2px",
                             color: "#fff",
                             fontSize: "2rem",
                         }}
@@ -102,7 +102,12 @@ const Contact = () => {
 
                 <button
                     className="button-send"
-                    style={{ color: "#fff", fontSize: "1.3rem" }}
+                    style={{
+                        color: "#fff",
+                        fontSize: "1.3rem",
+                        marginBottom: "2rem",
+                        borderRadius: "10px",
+                    }}
                 >
                     SEND
                 </button>
