@@ -25,21 +25,24 @@ const Clients = () => {
                     style={{
                         color: "#fff",
                         textAlign: "center",
-                        fontSize: "4rem",
-                        fontWeight: "600",
+                        fontSize: "3rem",
+                        fontWeight: "500",
                         marginBottom: "2rjm",
                     }}
                 >
-                    Our Clients
+                    OU
+                    <span
+                        style={{ textDecoration: "underline", color: "#fff" }}
+                    >
+                        R CLIEN
+                    </span>
+                    TS
                 </p>
-                <Slider
-                    {...settings}
-                    style={{ marginLeft: "2rem", padding: "2rem" }}
-                >
+                <Slider {...settings} style={{ padding: "2rem" }}>
                     <div>
                         <img
                             src={Laptop}
-                            style={{ height: "100px", width: "100px" }}
+                            style={{ height: "100px", width: "300px" }}
                         />
                     </div>
 

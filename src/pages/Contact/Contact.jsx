@@ -11,7 +11,6 @@ const Contact = () => {
                             marginTop: "2rem",
                             color: "#fff",
                             fontSize: "4rem",
-                            textAlign: "center",
                             fontWeight: "600",
                             marginBottom: "0",
                         }}
@@ -21,7 +20,6 @@ const Contact = () => {
                     <p
                         style={{
                             color: "purple",
-                            textAlign: "center",
                             marginTop: "0",
                         }}
                     >
@@ -31,8 +29,8 @@ const Contact = () => {
 
                 <Row
                     style={{
-                        marginLeft: "20%",
-                        marginRight: "20%",
+                        marginLeft: "2%",
+                        marginRight: "2%",
                         marginBottom: "2rem",
                     }}
                 >
@@ -49,8 +47,8 @@ const Contact = () => {
 
                 <Row
                     style={{
-                        marginLeft: "20%",
-                        marginRight: "20%",
+                        marginLeft: "2%",
+                        marginRight: "2%",
                         marginBottom: "2rem",
                     }}
                 >
@@ -66,8 +64,8 @@ const Contact = () => {
                 </Row>
                 <Row
                     style={{
-                        marginLeft: "20%",
-                        marginRight: "20%",
+                        marginLeft: "2%",
+                        marginRight: "2%",
                         marginBottom: "2.5rem",
                     }}
                 >
@@ -84,8 +82,8 @@ const Contact = () => {
 
                 <Row
                     style={{
-                        marginLeft: "20%",
-                        marginRight: "20%",
+                        marginLeft: "2%",
+                        marginRight: "2%",
                         marginBottom: "2rem",
                     }}
                 >

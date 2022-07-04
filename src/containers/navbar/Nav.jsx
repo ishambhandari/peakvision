@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import facebook from "../../assets/facebook.png";
 import instagram from "../../assets/instagram.png";
 import youtube from "../../assets/youtube.png";
+import logo from "../../assets/logo.png";
 import "./nav.css";
 
 const Nav = () => {
@@ -18,30 +19,33 @@ const Nav = () => {
     return (
         <div>
             {screenW > 800 && (
-                <div className="container-class">
-                    <Row>
-                        <Col sm={2} lg={2}>
-                            Peak Vision
-                        </Col>
-                        <Col sm={5} lg={7}>
-                            <div className="nav-div">
-                                <ul className="nav-links">
-                                    <li>Home</li>
-                                    <li>About</li>
-                                    <li>Works</li>
-                                    <li>Contacts</li>
-                                </ul>
-                            </div>
-                        </Col>
-                        <Col>
-                            <div className="icons">
-                                <img src={instagram} alt="instagram-logo" />
-                                <img src={facebook} alt="facebook-logo" />
-                                <img src={youtube} alt="youtube-logo" />
-                            </div>
-                        </Col>
-                    </Row>
-                </div>
+                <>
+                    <div className="container-class">
+                        <Row>
+                            <Col sm={1}>
+                                <img src={logo} className="logo-peak" />
+                            </Col>
+                            <Col sm={1}></Col>
+                            <Col sm={5} lg={7}>
+                                <div className="nav-div">
+                                    <ul className="nav-links">
+                                        <li>Home</li>
+                                        <li>About</li>
+                                        <li>Works</li>
+                                        <li>Contacts</li>
+                                    </ul>
+                                </div>
+                            </Col>
+                            <Col>
+                                <div className="icons">
+                                    <img src={instagram} alt="instagram-logo" />
+                                    <img src={facebook} alt="facebook-logo" />
+                                    <img src={youtube} alt="youtube-logo" />
+                                </div>
+                            </Col>
+                        </Row>
+                    </div>
+                </>
             )}
 
             {screenW < 800 && (
