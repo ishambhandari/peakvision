@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import facebook from "../../assets/facebook.png";
 import instagram from "../../assets/instagram.png";
 import youtube from "../../assets/youtube.png";
+import hamburger from "../../assets/hamburger.png";
 import logo from "../../assets/logo.png";
 import "./nav.css";
 
@@ -10,15 +11,16 @@ const Nav = () => {
     const [screenW, setScreenW] = React.useState(null);
     const [screenH, setScreenH] = React.useState(null);
     React.useEffect(() => {
-        setScreenW(window.innerWidth);
+        setScreenW(window.outerWidth);
         setScreenH(window.innerHeight);
+        console.log("winou", window.outerWidth);
         console.log("refreshing");
     }, []);
 
     console.log("this is inner width", screenW);
     return (
         <div>
-            {screenW > 800 && (
+            {screenW > 950 && (
                 <>
                     <div className="container-class">
                         <Row>
@@ -48,11 +50,11 @@ const Nav = () => {
                 </>
             )}
 
-            {screenW < 800 && (
+            {screenW < 950 && (
                 <div className="cscs">
                     <input type="checkbox" id="active" />
                     <label for="active" class="menu-btn">
-                        <i class="fas fa-bars"></i>
+                        <img src={hamburger} style={{ height: "50%" }} />
                     </label>
                     <div class="wrapper">
                         <ul>

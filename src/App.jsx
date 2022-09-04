@@ -1,22 +1,23 @@
 import React from "react";
-import Home from "./pages/Home/Home";
-import Nav from "./containers/navbar/Nav";
-import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
-import Clients from "./pages/Clients/Clients";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Adminlogin from "./pages/admin/Adminlogin.jsx";
+import Adminsignup from "./pages/admin/Adminsignup.jsx";
+import Landingpage from "./Landingpage.jsx";
+import Works from "./pages/Works/Works.jsx";
 
 import "./App.css";
 
 const App = () => {
     return (
         <div className="app-root">
-            <div>
-                <Nav className="nav-b" />
-            </div>
-            <Home />
-            <About />
-            <Clients />
-            <Contact />
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/admin" element={<Adminlogin />} />
+                    <Route path="/adminsignup" element={<Adminsignup />} />
+                    <Route path="/" element={<Landingpage />} />
+                    <Route path="/works" element={<Works />} />
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 };
