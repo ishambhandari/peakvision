@@ -22,6 +22,7 @@ const About = () => {
         <div
             style={{ marginTop: "5rem", marginBottom: "5rem" }}
             className="abt"
+            id="aboutPage"
         >
             <Container fluid>
                 <Row>

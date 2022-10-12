@@ -7,6 +7,7 @@ import "./admin.css";
 
 const Clienttable = ({ openModal, closeModal, setDel }) => {
     const [clientdata, setClientData] = React.useState([]);
+const  t = 1
 
     const [showAdd, setShowAdd] = React.useState(false);
     const [apitype, setApitype] = React.useState(null);

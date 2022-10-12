@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { postRegister } from "../../apirequest.jsx";
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
+
+import backhome from "../../assets/backhome.png";
 import logo from "../../assets/logo.png";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -57,6 +61,22 @@ const Adminsignup = () => {
 
     return (
         <div>
+            <Link to="/admin">
+                <Button
+                    variant="dark"
+                    className="page-title border-gradient border-gradient-purple"
+                >
+                    <img
+                        src={backhome}
+                        style={{
+                            height: "1rem",
+                            width: "1rem",
+                            marginRight: ".5rem",
+                        }}
+                    />
+                    Home
+                </Button>
+            </Link>
             <div className="Auth-form-container">
                 <ToastContainer />
                 <form className="Auth-form">

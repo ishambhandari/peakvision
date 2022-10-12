@@ -7,18 +7,19 @@ import Works from "./pages/Works/Works.jsx";
 
 import "./App.css";
 
+
 const App = () => {
-    return (
-        <div className="app-root">
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/admin" element={<Adminlogin />} />
-                    <Route path="/adminsignup" element={<Adminsignup />} />
-                    <Route path="/" element={<Landingpage />} />
-                    <Route path="/works" element={<Works />} />
-                </Routes>
-            </BrowserRouter>
-        </div>
-    );
+  return (
+    <div className="app-root">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/admin" element={<Adminlogin />} />
+          <Route path="/adminsignup" element={<Adminsignup />} />
+          <Route path="/" element={<Landingpage />} />
+          <Route path="/works" element={<Works />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 };
 export default App;

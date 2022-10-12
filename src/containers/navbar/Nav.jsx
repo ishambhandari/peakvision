@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-scroll";
+import { Link as Rlink } from "react-router-dom";
 import facebook from "../../assets/facebook.png";
 import instagram from "../../assets/instagram.png";
 import youtube from "../../assets/youtube.png";
@@ -10,12 +12,17 @@ import "./nav.css";
 const Nav = () => {
     const [screenW, setScreenW] = React.useState(null);
     const [screenH, setScreenH] = React.useState(null);
+    const checkboxref = React.createRef();
+
     React.useEffect(() => {
         setScreenW(window.outerWidth);
         setScreenH(window.innerHeight);
-        console.log("winou", window.outerWidth);
+        console.log("window", window.outerWidth);
         console.log("refreshing");
     }, []);
+    const handleRef = () => {
+        checkboxref.current.id = "inactive";
+    };
 
     console.log("this is inner width", screenW);
     return (
@@ -31,10 +38,35 @@ const Nav = () => {
                             <Col sm={5} lg={7}>
                                 <div className="nav-div">
                                     <ul className="nav-links">
-                                        <li>Home</li>
-                                        <li>About</li>
-                                        <li>Works</li>
-                                        <li>Contacts</li>
+                                        <Link
+                                            className="link"
+                                            to="homePage"
+                                            smooth={true}
+                                            duration={400}
+                                        >
+                                            <li>Home</li>
+                                        </Link>
+
+                                        <Link
+                                            className="link"
+                                            to="aboutPage"
+                                            smooth={true}
+                                            duration={400}
+                                        >
+                                            <li>About</li>
+                                        </Link>
+
+                                        <Rlink className="link" to="/works">
+                                            <li>Works</li>
+                                        </Rlink>
+                                        <Link
+                                            className="link"
+                                            to="contactPage"
+                                            smooth={true}
+                                            duration={400}
+                                        >
+                                            <li>Contacts</li>
+                                        </Link>
                                     </ul>
                                 </div>
                             </Col>
@@ -52,27 +84,100 @@ const Nav = () => {
 
             {screenW < 950 && (
                 <div className="cscs">
-                    <input type="checkbox" id="active" />
-                    <label for="active" class="menu-btn">
+                    <input type="checkbox" id="active" ref={checkboxref} />
+                    <label
+                        for="active"
+                        class="menu-btn"
+                        onClick={() => (checkboxref.current.id = "active")}
+                    >
                         <img src={hamburger} style={{ height: "50%" }} />
                     </label>
                     <div class="wrapper">
                         <ul>
-                            <li style={{ marginBottom: "2rem" }}>
-                                <a href="#">Home</a>
-                            </li>
+                            <Link
+                                className="link"
+                                to="homePage"
+                                smooth={true}
+                                duration={400}
+                                style={{
+                                    marginBottom: "3rem",
+                                    textDecoration: "none",
+                                }}
+                                onClick={handleRef}
+                            >
+                                <li
+                                    style={{
+                                        fontSize: "3rem",
+                                        textDecoration: "none",
+                                        textUnderline: "none",
+                                    }}
+                                >
+                                    Home
+                                </li>
+                            </Link>
 
-                            <li style={{ marginBottom: "2rem" }}>
-                                <a href="#">About</a>
-                            </li>
+                            <Link
+                                className="link"
+                                to="aboutPage"
+                                smooth={true}
+                                duration={400}
+                                style={{
+                                    marginBottom: "3rem",
+                                    textDecoration: "none",
+                                }}
+                                onClick={handleRef}
+                            >
+                                <li
+                                    style={{
+                                        fontSize: "3rem",
+                                        textDecoration: "none",
+                                        textUnderline: "none",
+                                    }}
+                                >
+                                    About
+                                </li>
+                            </Link>
 
-                            <li style={{ marginBottom: "2rem" }}>
-                                <a href="#">Works</a>
-                            </li>
+                            <Rlink
+                                className="link"
+                                to="/works"
+                                style={{
+                                    marginBottom: "3rem",
+                                    textDecoration: "none",
+                                }}
+                                onClick={handleRef}
+                            >
+                                <li
+                                    style={{
+                                        fontSize: "3rem",
+                                        textDecoration: "none",
+                                    }}
+                                >
+                                    Works
+                                </li>
+                            </Rlink>
 
-                            <li style={{ marginBottom: "2rem" }}>
-                                <a href="#">Contacts</a>
-                            </li>
+                            <Link
+                                className="link"
+                                to="contactPage"
+                                smooth={true}
+                                duration={400}
+                                style={{
+                                    marginBottom: "3rem",
+                                    textDecoration: "none",
+                                }}
+                                onClick={handleRef}
+                            >
+                                <li
+                                    style={{
+                                        fontSize: "3rem",
+                                        textDecoration: "none",
+                                        textUnderline: "none",
+                                    }}
+                                >
+                                    Contact
+                                </li>
+                            </Link>
                         </ul>
                     </div>
                 </div>
